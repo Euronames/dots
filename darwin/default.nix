@@ -84,10 +84,21 @@
   #networking.hostName = machineConfig.hostname;
   #networking.localHostName = machineConfig.hostname;
 
-  /*
-      system.keyboard.enableKeyMapping = true;
-      system.keyboard.remapCapsLockToControl = true;
-    */
+
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true;
+    nonUS.remapTilde = true;
+    userKeyMapping = [
+      {
+        HIDKeyboardModifierMappingSrc = 233; # € key
+        HIDKeyboardModifierMappingDst = 219; # ¤ key
+      }
+    ];
+
+  };
+
+
 
   system.defaults.finder = {
     FXPreferredViewStyle = "clmv";
