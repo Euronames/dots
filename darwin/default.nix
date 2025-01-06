@@ -41,6 +41,7 @@
   };
 
   #Fixing spotlight
+  #imports = ["./"];
   system.activationScripts.applications.text =
     let
       env = pkgs.buildEnv {
@@ -63,26 +64,19 @@
     '';
 
 
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-code
+    meslo-lg
+    fira-mono
+    #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
+  ];
 
-  /*
-      fonts.packages = with pkgs.nerd-fonts; [
-      fira-code
-      #fira-code-symbols
-      meslo-lg
-      fira-mono
-      #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
-      ];
-    */
-  /* fonts = with pkgs; [
-      nerd-fonts.fira-code
-      nerd-fonts.fira-code-symbols
-      nerd-fonts.fira-mono
-      nerd-fonts.meslo
-      ];
-    */
-  #networking.computerName = machineConfig.hostname;
-  #networking.hostName = machineConfig.hostname;
-  #networking.localHostName = machineConfig.hostname;
+  networking =
+    {
+      computerName = machineConfig.hostname;
+      hostName = machineConfig.hostname;
+      localHostName = machineConfig.hostname;
+    };
 
 
   system.keyboard = {
