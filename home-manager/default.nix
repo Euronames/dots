@@ -4,6 +4,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
     users.${machineConfig.username} = {
       home.username = machineConfig.username;
       # home.homeDirectory = home; # clashes with nix-darwin

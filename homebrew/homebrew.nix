@@ -8,9 +8,7 @@
 
 
   masApps = {
-    "Consent-O-Matic     " = 1606897889;
-    "Amphetamine         " = 937984704;
-    "Hidden Bar          " = 1452453066;
+    #"Hidden Bar" = 1452453066;
   };
 
   brews = [

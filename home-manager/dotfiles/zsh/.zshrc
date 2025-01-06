@@ -3,7 +3,7 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 #zmodload zsh/zprof
 
 #EXPORTS
-export DOTFILES="$HOME/Dots"
+export DOTFILES="$HOME/Projects/dots"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export ZSH="$HOME/.oh-my-zsh"
 export IDF_PATH="$HOME/esp/esp-idf"
