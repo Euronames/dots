@@ -1,0 +1,27 @@
+# Starship command prompt configuration file. Colour choice and over-use of emoji
+# is to help blend in with Ubuntu MATE default theme, Ambiant-Mate.
+
+
+# disable starship from forcing a new line to be taken. Solved the empty line 
+# at start of terminal
+add_newline = false
+
+[line_break]
+disabled = true
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[sudo]
+style = 'bold green'
+symbol = '🧙 '
+disabled = false

@@ -1,0 +1,62 @@
+#Make folder and cd into it
+function mkcd() {
+    if [[ "$1" ]]; then
+        mkdir "$1" && cd "$1"
+    fi
+}
+
+#Git command
+function skub() {
+    git pull
+    git add -A
+
+    if [ "$1" != "" ]; then
+        git commit -m "$1"
+    else
+        git commit -m "Changed stuff" # default commit message is `update`
+    fi                                # closing statement of if-else block
+    git push
+}
+
+#Open files from terminal
+# function open () {
+# 	xdg-open "$@">/dev/null 2>&1
+# }
+
+# function o () {
+# if [ "$1" != "" ]
+# then
+# 	open "$1"
+# else
+# 	open "."
+# fi
+# }
+
+#Convert file
+function to() {
+    if [ "$1" != "" ]; then
+        if [ "$2" != "" ]; then
+            unoconv -f "$1" "$2"
+            #rmf "$2"
+        else
+            echo "Need to specify file to convert...."
+        fi
+    else
+        echo "Need to specify what to convert to..."
+    fi
+}
+
+#############
+### Hooks ###
+#############
+
+#LS after CD
+function chpwd() {
+    emulate -L zsho
+    ls
+}
+
+function set-title-precmd() {
+    #printf "jens"
+    printf "\e]2;%s\a" "${PWD/#$HOME/~}"
+}
