@@ -36,13 +36,12 @@
       nixpkgs-fmt
     ];
 
-    #systemPath = [ "/opt/homebrew/bin" ];
-    #pathsToLink = [ "/Applications" ];
+    systemPath = [ "/opt/homebrew/bin" ];
+    pathsToLink = [ "/Applications" ];
   };
 
   #Fixing spotlight
   system.activationScripts.applications = import ./spotlightFix.nix { inherit pkgs config; };
-
 
   fonts.packages = with pkgs.nerd-fonts;
     [
@@ -73,8 +72,6 @@
 
   };
 
-
-
   system.defaults.finder = {
     FXPreferredViewStyle = "clmv";
     ShowPathbar = true;
@@ -93,52 +90,33 @@
 
     ];
 
-    /*
-      appswitcher-all-displays = true;
-      expose-group-by-app = true;
-      magnification = true;
-      mru-spaces = false;
-      orientation = "bottom";
-      tilesize = 48;
-      largesize = 64;
+    appswitcher-all-displays = true;
+    expose-group-apps = true;
+    magnification = true;
+    mru-spaces = false;
+    orientation = "bottom";
+    tilesize = 60;
+    largesize = 70;
 
-      # disable hot corners
-      wvous-bl-corner = 1;
-      wvous-tl-corner = 1;
-      wvous-br-corner = 1;
-      wvous-tr-corner = 1;
-      */
+    # disable hot corners
+    wvous-bl-corner = 1;
+    wvous-tl-corner = 1;
+    wvous-br-corner = 1;
+    wvous-tr-corner = 1;
   };
 
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
     AppleInterfaceStyle = "Dark";
-    /*
-      AppleEnableMouseSwipeNavigateWithScrolls = false;
-      AppleEnableSwipeNavigateWithScrolls = false;
-      AppleMeasurementUnits = "Centimeters";
-      AppleTemperatureUnit = "Celsius";
-      AppleMetricUnits = 1;
-      AppleICUForce24HourTime = true;
-      InitialKeyRepeat = 15;
-      KeyRepeat = 2;
-      ApplePressAndHoldEnabled = false;
-      NSAutomaticCapitalizationEnabled = false;
-      NSAutomaticDashSubstitutionEnabled = false;
-      NSAutomaticPeriodSubstitutionEnabled = false;
-      NSAutomaticQuoteSubstitutionEnabled = false;
-      NSAutomaticSpellingCorrectionEnabled = false;
-      NSDocumentSaveNewDocumentsToCloud = false;
-      "com.apple.keyboard.fnState" = true;
-      "com.apple.trackpad.enableSecondaryClick" = false;
-      */
+    AppleEnableMouseSwipeNavigateWithScrolls = false;
+    AppleEnableSwipeNavigateWithScrolls = false;
+    AppleMeasurementUnits = "Centimeters";
+    AppleTemperatureUnit = "Celsius";
+    AppleMetricUnits = 1;
+    InitialKeyRepeat = 15;
+    KeyRepeat = 2;
+    ApplePressAndHoldEnabled = false;
   };
-
-  /*
-      system.defaults = {
-      loginwindow.GuestEnabled = false;
-      };
-    */
 
   security.pam.enableSudoTouchIdAuth = true;
 
@@ -146,20 +124,20 @@
 
 
   # services.skhd.enable = true;
-  /*
-      services.yabai.enable = true;
-      services.yabai.config = {
-      # focus_follows_mouse = "autoraise";
-      mouse_follows_focus = "off";
-      window_placement    = "second_child";
-      window_opacity      = "off";
-      top_padding         = 36;
-      bottom_padding      = 10;
-      left_padding        = 10;
-      right_padding       = 10;
-      window_gap          = 10;
-      };
-    */
+
+  services.yabai.enable = true;
+  services.yabai.config = {
+    # focus_follows_mouse = "autoraise";
+    mouse_follows_focus = "off";
+    window_placement = "second_child";
+    window_opacity = "off";
+    top_padding = 36;
+    bottom_padding = 10;
+    left_padding = 10;
+    right_padding = 10;
+    window_gap = 10;
+  };
+
 
   system.activationScripts.postUserActivation.text = ''
     # Following line should allow us to avoid a logout/login cycle
