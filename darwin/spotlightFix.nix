@@ -1,5 +1,5 @@
 { pkgs, config, ... }: {
-  system.activationScripts.applications.text =
+  text =
     let
       env = pkgs.buildEnv {
         name = "system-applications";
