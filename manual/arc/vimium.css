@@ -86,29 +86,7 @@
     color: #2E3440;
 }
 
-/* Light Markers */
-div>.internalVimiumHintMarker.vimiumHintMarker {
-    background: #EBCB8B;
-    font-size: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.15) border-radius: 5px;
-    box-shadow: 0em 0.1em 0.6em 0.1em rgba(0, 0, 0, 0.2);
-    padding: 2px 4px;
-}
-
-/* Link hint text */
-div>.internalVimiumHintMarker.vimiumHintMarker span {
-    color: #3B4252;
-    font-size: inherit;
-    text-shadow: none;
-}
-
-/* Link hint matching characters */
-div>.internalVimiumHintMarker.vimiumHintMarker>.matchingCharacter {
-    color: #2E3440;
-}
-
 /* Dark Markers */
-/* Remove everything from here below if you prefer light markers */
 div>.internalVimiumHintMarker.vimiumHintMarker {
     background: #5E81AC;
     font-size: 12px;
