@@ -152,6 +152,8 @@
     orientation = "bottom";
     tilesize = 60;
     largesize = 70;
+    autohide-delay = 0.05;
+    show-recents = false;
 
     # disable hot corners
     wvous-bl-corner = 1;
@@ -160,18 +162,33 @@
     wvous-tr-corner = 1;
   };
 
+  system.defaults.trackpad =
+    {
+      Clicking = true;
+      Dragging = true;
+    };
+
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
     AppleInterfaceStyle = "Dark";
-    AppleEnableMouseSwipeNavigateWithScrolls = false;
-    AppleEnableSwipeNavigateWithScrolls = false;
+    AppleEnableMouseSwipeNavigateWithScrolls = true;
+    AppleEnableSwipeNavigateWithScrolls = true;
     AppleMeasurementUnits = "Centimeters";
     AppleTemperatureUnit = "Celsius";
     AppleMetricUnits = 1;
     InitialKeyRepeat = 15;
     KeyRepeat = 2;
     ApplePressAndHoldEnabled = false;
+    AppleShowAllFiles = true;
+    AppleShowAllExtensions = true;
+    AppleShowScrollBars = "WhenScrolling";
+    "com.apple.mouse.tapBehavior" = 1; #Tap to click
+    "com.apple.swipescrolldirection" = true;
+    "com.apple.trackpad.forceClick" = false;
   };
+
+  #Disable mouse acceleration
+  system.defaults.".GlobalPreferences"."com.apple.mouse.scaling" = -1.0;
 
   time.timeZone = "Europe/Copenhagen";
 
