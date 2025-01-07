@@ -61,4 +61,4 @@ This setup is inspired by:
 ### Troubleshooting
 - If the `darwin-rebuild` command fails, verify your Nix installation and flake configuration.
 - Check for updates to `nix-darwin` and `home-manager` to ensure compatibility with the latest macOS version.
-"""
+
