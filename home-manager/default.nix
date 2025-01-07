@@ -10,16 +10,11 @@
       # home.homeDirectory = home; # clashes with nix-darwin
 
       home.stateVersion = machineConfig.homeManager.stateVersion;
+      programs.zsh.oh-my-zsh.enable = true;
 
       imports = [
         ./packages.nix
         ./dotfiles.nix
-        /*
-        ./programs.nix
-        ./programs/zsh.nix
-        ./programs/zellij.nix
-        ./session-variables.nix
-        */
       ];
     };
   };
