@@ -13,6 +13,7 @@ This repository contains my personal dotfiles, customized for setting up and man
 ### How to Use
 
 1. **Run Bootstrap Script**
+
    - Execute the `bootstrap.sh` script to install the necessary tools and dependencies.
 
      ```bash
@@ -20,13 +21,15 @@ This repository contains my personal dotfiles, customized for setting up and man
      ```
 
 2. **Rebuild System Configuration**
+
    - Apply the full configuration using `nix-darwin`:
 
      ```bash
-     darwin-rebuild switch --flake ~/Projects/dotfiles#MacBook-Pro
+     darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
      ```
 
 3. **Manual Steps**
+
    - Import the Raycast configuration manually.
    - Apply the custom Norly theme for Warp:
      1. Open Warp.
@@ -40,15 +43,16 @@ This repository contains my personal dotfiles, customized for setting up and man
 Ensure the following tools and frameworks are installed before applying the configurations:
 
 1. **System Requirements**:
+
    - macOS (preferably the latest version for compatibility with `nix-darwin`).
    - Command Line Tools (run `xcode-select --install` if not already installed).
-
 2. **Toolchain**:
+
    - [Nix](https://nixos.org/download.html): The package manager required to build and apply configurations.
    - [nix-darwin](https://github.com/LnL7/nix-darwin): Manages system-level configurations on macOS.
    - [Home Manager](https://github.com/nix-community/home-manager): Manages user-level configurations.
-
 3. **File-Specific Dependencies**:
+
    - **`packages.nix`**:
      - Ensure the listed packages (e.g., `mkalias`, `nixpkgs-fmt`) are available in your Nix channels or overlays.
      - Review and customize the list to match your use case.
@@ -56,12 +60,12 @@ Ensure the following tools and frameworks are installed before applying the conf
      - The `services.nix` file assumes the Nix Daemon (`nix-daemon`) is enabled.
    - **`zsh.nix`**:
      - Installs and configures Zsh. Ensure Zsh plugins such as `zsh-autosuggestions` are available.
-
 4. **Optional Tools**:
+
    - **Spotlight Fix**: If using `spotlightFix.nix`, confirm it is compatible with the current macOS version and Spotlight configuration.
    - **Warp Theme**: Requires the Warp terminal to apply custom themes.
-
 5. **Recommended Commands**:
+
    - Validate the configuration:
 
      ```bash
