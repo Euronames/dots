@@ -5,7 +5,7 @@
     mkalias
     nixpkgs-fmt
   ];
-    environment = {
+  environment = {
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };

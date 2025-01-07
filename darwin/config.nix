@@ -3,41 +3,38 @@
   #New stuff
   /*
   
-    system.preferences.keyboard = {
-    keyRepeat = 2;
-    initialKeyRepeat = 15;
-  };
 
-  system.preferences.mouse = {
+
+    system.preferences.mouse = {
     trackingSpeed = 0.75;
-  };
+    };
 
-  system.preferences.trackpad = {
+    system.preferences.trackpad = {
     tapToClick = true;
-  };
+    };
 
-  system.preferences.appearance = {
+    system.preferences.appearance = {
     darkMode = true;
-  };
+    };
   
 
-   services.fileVault.enable = true;
+     services.fileVault.enable = true;
 
-   services.firewall.enable = true;
+     services.firewall.enable = true;
 
-  system.preferences.security = {
+    system.preferences.security = {
     allowAppStoreOnly = false;
-  };
+    };
 
-  {
-  services.timeMachine = {
+    {
+    services.timeMachine = {
     enable = true;
     destinations = [ "/Volumes/Backup" ];
-  };
-};
+    };
+    };
 
-{
-  services.displayManager = {
+    {
+    services.displayManager = {
     enable = true;
     configuration = {
       outputs = {
@@ -45,60 +42,60 @@
         "HDMI-1" = { resolution = "2560x1440"; refreshRate = 144; };
       };
     };
-  };
-}
+    };
+    }
 
-{
-  system.preferences.display.nightShift = {
+    {
+    system.preferences.display.nightShift = {
     enable = true;
     startTime = "21:00";
     endTime = "07:00";
     warmth = 0.75; # Adjust color warmth (0.0 - 1.0)
-  };
-}
+    };
+    }
 
 
-{
-  services.softwareUpdate = {
+    {
+    services.softwareUpdate = {
     enable = true;
     schedule = "daily";
     autoDownload = true;
     installCriticalUpdates = true;
-  };
-}
+    };
+    }
 
-{
-  system.preferences.finder = {
+    {
+    system.preferences.finder = {
     showHiddenFiles = true;
     defaultLocation = "/Users";
     sidebarFavorites = [ "~/Documents" "~/Downloads" ];
-  };
-}
+    };
+    }
 
-{
-  programs.yabai = {
+    {
+    programs.yabai = {
     enable = true;
     scriptingAdditions = true;
     config = {
       mouseFollowsFocus = true;
       autoBalance = true;
     };
-  };
-}
+    };
+    }
 
-{
-  system.preferences.privacy = {
+    {
+    system.preferences.privacy = {
     camera = { enable = false; }; # Disable camera access by default
     microphone = { enable = false; };
-  };
-}
+    };
+    }
 
-{
-  system.preferences.location = {
+    {
+    system.preferences.location = {
     enable = false;
     allowApps = [ "Maps" ];
-  };
-}
+    };
+    }
 
 
 
@@ -112,12 +109,11 @@
       #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
     ];
 
-  networking =
-    {
-      computerName = machineConfig.hostname;
-      hostName = machineConfig.hostname;
-      localHostName = machineConfig.hostname;
-    };
+  networking = {
+    computerName = machineConfig.hostname;
+    hostName = machineConfig.hostname;
+    localHostName = machineConfig.hostname;
+  };
 
   system.keyboard = {
     enableKeyMapping = true;
@@ -176,6 +172,8 @@
     KeyRepeat = 2;
     ApplePressAndHoldEnabled = false;
   };
+
+  time.timeZone = "Europe/Copenhagen";
 
   security.pam.enableSudoTouchIdAuth = true;
 
