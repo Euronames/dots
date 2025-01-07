@@ -36,6 +36,72 @@
   };
 };
 
+{
+  services.displayManager = {
+    enable = true;
+    configuration = {
+      outputs = {
+        "eDP-1" = { resolution = "1920x1080"; refreshRate = 60; };
+        "HDMI-1" = { resolution = "2560x1440"; refreshRate = 144; };
+      };
+    };
+  };
+}
+
+{
+  system.preferences.display.nightShift = {
+    enable = true;
+    startTime = "21:00";
+    endTime = "07:00";
+    warmth = 0.75; # Adjust color warmth (0.0 - 1.0)
+  };
+}
+
+
+{
+  services.softwareUpdate = {
+    enable = true;
+    schedule = "daily";
+    autoDownload = true;
+    installCriticalUpdates = true;
+  };
+}
+
+{
+  system.preferences.finder = {
+    showHiddenFiles = true;
+    defaultLocation = "/Users";
+    sidebarFavorites = [ "~/Documents" "~/Downloads" ];
+  };
+}
+
+{
+  programs.yabai = {
+    enable = true;
+    scriptingAdditions = true;
+    config = {
+      mouseFollowsFocus = true;
+      autoBalance = true;
+    };
+  };
+}
+
+{
+  system.preferences.privacy = {
+    camera = { enable = false; }; # Disable camera access by default
+    microphone = { enable = false; };
+  };
+}
+
+{
+  system.preferences.location = {
+    enable = false;
+    allowApps = [ "Maps" ];
+  };
+}
+
+
+
   */
 
   fonts.packages = with pkgs.nerd-fonts;
