@@ -1,5 +1,42 @@
 { pkgs, machineConfig, config, ... }:
 {
+  #New stuff
+  /*
+  
+    system.preferences.keyboard = {
+    keyRepeat = 2;
+    initialKeyRepeat = 15;
+  };
+
+  system.preferences.mouse = {
+    trackingSpeed = 0.75;
+  };
+
+  system.preferences.trackpad = {
+    tapToClick = true;
+  };
+
+  system.preferences.appearance = {
+    darkMode = true;
+  };
+  
+
+   services.fileVault.enable = true;
+
+   services.firewall.enable = true;
+
+  system.preferences.security = {
+    allowAppStoreOnly = false;
+  };
+
+  {
+  services.timeMachine = {
+    enable = true;
+    destinations = [ "/Volumes/Backup" ];
+  };
+};
+
+  */
 
   fonts.packages = with pkgs.nerd-fonts;
     [
