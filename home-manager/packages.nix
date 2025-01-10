@@ -31,11 +31,14 @@
     vscode
     arc-browser
     _1password-cli
-    # _1password-gui #marked as broken, refusing to evaluate.
+    #_1password-gui #marked as broken, refusing to evaluate.
     spotify
     git
     neovim
     hidden-bar
+    alt-tab-macos
+    rectangle
+    whatsapp-for-mac
 
 
   ];

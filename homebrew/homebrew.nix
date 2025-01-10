@@ -1,10 +1,15 @@
+
 {
   enable = true;
-  #  caskArgs.no_quarantine = true;
-  global.brewfile = true;
-  onActivation.cleanup = "zap";
-  onActivation.autoUpdate = true;
-  onActivation.upgrade = true;
+  caskArgs.no_quarantine = true;
+
+  
+  onActivation = {
+		#cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
+    autoUpdate = true;
+    upgrade = true;
+	};
+
 
 
   masApps = {
@@ -15,7 +20,11 @@
   ];
   casks = [
     "1password"
+    "topnotch"
+
+    "vlc"
   ];
   taps = [
   ];
+
 }
