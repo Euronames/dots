@@ -13,8 +13,8 @@ function skub() {
     if [ "$1" != "" ]; then
         git commit -m "$1"
     else
-        git commit -m "Changed stuff" # default commit message is `update`
-    fi                                # closing statement of if-else block
+        git commit -m "."
+    fi
     git push
 }
 

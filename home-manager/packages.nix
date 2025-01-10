@@ -39,7 +39,13 @@
     alt-tab-macos
     rectangle
     whatsapp-for-mac
-
+    trash-cli
+    prettyping
+    lolcat
+    neofetch
+    cmatrix
+    sl
+    autojump
 
   ];
 }

@@ -35,7 +35,7 @@ export STARSHIP_CONFIG="/Users/jensnavne/.config/starship.toml"
 #plugins=(cp git alias-tips zsh-autosuggestions fzf-tab zsh-syntax-highlighting zsh-256color copyzshell navi zsh-completions)
 #plugins=(cp git alias-tips zsh-autosuggestions fzf-tab fast-syntax-highlighting zsh-256color copyzshell zsh-completions z.lua)
 #plugins=(cp git zsh-autosuggestions fzf-tab fast-syntax-highlighting zsh-256color copyzshell zsh-completions autojump)
-plugins=(cp git 1password)
+plugins=(cp git 1password autojump)
 
 # Sourcing
 source $ZSH/oh-my-zsh.sh
