@@ -9,6 +9,7 @@
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
+nixpkgs.config.allowUnsupportedSystem = true;
 
   # Git commit hash for the configuration revision
   system.configurationRevision = self.rev or self.dirtyRev or null;

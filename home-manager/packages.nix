@@ -46,6 +46,9 @@
     cmatrix
     sl
     autojump
+    ncdu
+    mkalias
+    nixpkgs-fmt
 
   ];
 }
