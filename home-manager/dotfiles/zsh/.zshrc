@@ -4,32 +4,32 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 
 #EXPORTS
 export DOTFILES="$HOME/Projects/dots"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export ZSH="$HOME/.oh-my-zsh"
-export IDF_PATH="$HOME/esp/esp-idf"
+#export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+#export ZSH="$HOME/.oh-my-zsh"
+#export IDF_PATH="$HOME/esp/esp-idf"
 #export PATH="$PATH:~/Code/bin"
 export ZSH_CUSTOM="$DOTFILES/oh-my-zsh/.oh-my-zsh"
-export TERM='xterm-256color'
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export ANDROID_HOME="$HOME/Android/Sdk"
-export JAVA_HOME="/usr/lib/jvm/default"
-export JDK_HOME="/usr/lib/jvm/java-8-openjdk/"
+#export TERM='xterm-256color'
+#export QT_AUTO_SCREEN_SCALE_FACTOR=1
+#export ANDROID_HOME="$HOME/Android/Sdk"
+#export JAVA_HOME="/usr/lib/jvm/default"
+#export JDK_HOME="/usr/lib/jvm/java-8-openjdk/"
 #export EDITOR="nvim"
 export EDITOR="code"
 export VISUAL="nvim"
-export GOPATH="$HOME/Code/resources/Go"
+#export GOPATH="$HOME/Code/resources/Go"
 export LOCALBIN="$HOME/.local/bin"
-export ADB="$ANDROID_HOME/platform-tools"
-export ANDROID_TOOLS="$ANDROID_HOME/tools"
-export KITTYCONF="$DOTFILES/kitty/.config/kitty"
-export STARSHIP_CONFIG="/Users/jensnavne/.config/starship.toml"
+#export ADB="$ANDROID_HOME/platform-tools"
+#export ANDROID_TOOLS="$ANDROID_HOME/tools"
+#export KITTYCONF="$DOTFILES/kitty/.config/kitty"
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 #export XDG_CURRENT_DESKTOP="sway"
 
 #FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 #eval "$(lua $ZSH_CUSTOM/plugins/z.lua/z.lua --init zsh enhanced once fzf)"
 
 #Theme
-#ZSH_THEME='euro'
+ZSH_THEME='euro'
 
 #Pluins
 #plugins=(cp git alias-tips zsh-autosuggestions fzf-tab zsh-syntax-highlighting zsh-256color copyzshell navi zsh-completions)
@@ -38,7 +38,7 @@ export STARSHIP_CONFIG="/Users/jensnavne/.config/starship.toml"
 plugins=(cp git 1password autojump)
 
 # Sourcing
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 #[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 #source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
