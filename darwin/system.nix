@@ -22,8 +22,13 @@ nixpkgs.config.allowUnsupportedSystem = true;
 
   homebrew = import ./homebrew.nix;
 
+  
+
   # Following line should allow us to avoid a logout/login cycle
   system.activationScripts.postUserActivation.text = ''
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+    echo >&2 "Switching wallpapers..."
+    /usr/local/bin/desktoppr ./manual/assets/wallpaper.png
   '';
 }

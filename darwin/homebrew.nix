@@ -18,8 +18,9 @@
   ];
   casks = [
     "1password"
-    "topnotch"
+    #"topnotch"
     "vlc"
+    "desktoppr"
   ];
   taps = [
   ];
