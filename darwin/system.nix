@@ -20,7 +20,7 @@ nixpkgs.config.allowUnsupportedSystem = true;
   #Fixing spotlight
   system.activationScripts.applications = import ./spotlightFix.nix { inherit pkgs config; };
 
-  homebrew = import ../homebrew/homebrew.nix;
+  homebrew = import ./homebrew.nix;
 
   # Following line should allow us to avoid a logout/login cycle
   system.activationScripts.postUserActivation.text = ''

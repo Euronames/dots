@@ -58,7 +58,6 @@
         modules = [
           ./darwin
           nix-homebrew.darwinModules.nix-homebrew
-          (import ./homebrew)
           home-manager.darwinModules.home-manager
           (import ./home-manager)
         ];
