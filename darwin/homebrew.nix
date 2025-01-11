@@ -10,7 +10,6 @@
 	};
 
   masApps = {
-    #"Hidden Bar" = 1452453066;
   };
 
   brews = [
@@ -18,7 +17,6 @@
   ];
   casks = [
     "1password"
-    #"topnotch"
     "vlc"
     "desktoppr"
   ];
