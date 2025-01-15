@@ -5,7 +5,7 @@
     enable = true;
 
     # TODO: fails with 'ln /usr/local/bin/brew: No such file or directory"
-    enableRosetta = false;
+    #enableRosetta = true;
 
     user = machineConfig.username;
     taps = {
