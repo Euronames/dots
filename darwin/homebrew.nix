@@ -1,16 +1,14 @@
-
 {
   enable = true;
   #caskArgs.no_quarantine = false;
 
   onActivation = {
-		cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
+    cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
     autoUpdate = true;
     upgrade = true;
-	};
-
-  masApps = {
   };
+
+  masApps = { };
 
   brews = [
     "unoconv"

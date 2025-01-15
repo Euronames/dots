@@ -10,7 +10,7 @@
     hyperfine
     lsd # https://github.com/lsd-rs/lsd
     tree
-
+    nil
     # search
     ripgrep # https://github.com/BurntSushi/ripgrep
 
