@@ -4,7 +4,7 @@ SPACESHIP_PROMPT_ASYNC=FALSE
 
 #EXPORTS
 export DOTFILES="$HOME/Projects/dots"
-#export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 #export ZSH="$HOME/.oh-my-zsh"
 #export IDF_PATH="$HOME/esp/esp-idf"
 #export PATH="$PATH:~/Code/bin"

@@ -27,6 +27,7 @@
     ./services.nix
     ./users.nix
     ./system.nix
+    ./environment.nix
     ./zsh.nix
   ];
 }
