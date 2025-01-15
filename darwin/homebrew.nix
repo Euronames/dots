@@ -19,6 +19,7 @@
     "1password"
     "vlc"
     "desktoppr"
+    "messenger"
   ];
   taps = [
   ];
