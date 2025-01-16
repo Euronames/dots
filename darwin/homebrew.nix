@@ -11,13 +11,13 @@
   masApps = { };
 
   brews = [
-    "unoconv"
+    "unoconv"     #Universal converter: https://github.com/unoconv/unoconv
   ];
   casks = [
-    "1password"
-    "vlc"
-    "desktoppr"
-    "messenger"
+    "1password"   #Password manager 
+    "vlc"         #Media player
+    "desktoppr"   #Read and set wallpaper: https://github.com/scriptingosx/desktoppr
+    "messenger"   #Facebook messenger client
   ];
   taps = [
   ];
