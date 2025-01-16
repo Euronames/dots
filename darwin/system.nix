@@ -27,6 +27,6 @@
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
     echo >&2 "Switching wallpapers..."
-    /usr/local/bin/desktoppr ./darwin/assets/wallpaper.png
+    /usr/local/bin/desktoppr "$HOME/Projects/dots/darwin/assets/wallpaper.png"
   '';
 }

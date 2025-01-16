@@ -37,8 +37,10 @@
   system.defaults.dock = {
     autohide = true;
     persistent-apps = [
-      "${pkgs.arc-browser}/Applications/Arc.app"
-      "${pkgs.warp-terminal}/Applications/Warp.app"
+      #"${pkgs.arc-browser}/Applications/Arc.app"
+      "/Applications/Arc.app"
+      #"${pkgs.warp-terminal}/Applications/Warp.app"
+      "/Applications/Warp.app"
       "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
       "${pkgs.spotify}/Applications/Spotify.app"
 

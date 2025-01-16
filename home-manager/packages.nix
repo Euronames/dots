@@ -39,10 +39,10 @@
     nixpkgs-fmt
 
     #TOOLS#
+    #warp-terminal
+    #arc-browser
     raycast
-    warp-terminal
     vscode
-    arc-browser
     _1password-cli
     #_1password-gui              #marked as broken, refusing to evaluate.
     spotify
