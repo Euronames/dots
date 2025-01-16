@@ -16,4 +16,4 @@
 DOTFILES="${HOME}/Projects/dots"
 git -C $DOTFILES add -A
 git -C $DOTFILES commit -m '🛠️'
-git -C $DOTFILES push
+git -C $DOTFILES push origin main
