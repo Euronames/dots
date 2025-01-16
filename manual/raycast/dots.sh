@@ -14,7 +14,6 @@
 # @raycast.authorURL https://raycast.com/Euronames
 
 DOTFILES="${HOME}/Projects/dots"
-echo $DOTFILES
 git -C $DOTFILES add -A
 git -C $DOTFILES commit -m '🛠️'
 git -C $DOTFILES push
