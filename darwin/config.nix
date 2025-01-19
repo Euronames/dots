@@ -42,7 +42,8 @@
       #"${pkgs.warp-terminal}/Applications/Warp.app"
       "/Applications/Warp.app"
       "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
-      "${pkgs.spotify}/Applications/Spotify.app"
+      #"${pkgs.spotify}/Applications/Spotify.app"
+      "/Applications/Spotify.app"
 
     ];
 

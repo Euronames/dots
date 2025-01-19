@@ -45,7 +45,7 @@
     vscode
     _1password-cli
     #_1password-gui              #marked as broken, refusing to evaluate.
-    spotify
+    #spotify
     whatsapp-for-mac
 
     #MACOS#
