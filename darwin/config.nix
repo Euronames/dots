@@ -12,6 +12,7 @@
     #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
   ];
 
+  # Network configuration
   networking = {
     computerName = machineConfig.hostname;
     hostName = machineConfig.hostname;
@@ -25,6 +26,7 @@
 
   };
 
+  # Finder preferences
   system.defaults.finder = {
     FXPreferredViewStyle = "clmv";
     ShowPathbar = true;
@@ -33,6 +35,7 @@
     FXEnableExtensionChangeWarning = false;
   };
 
+  # Dock configuration
   system.defaults.dock = {
     autohide = true;
     persistent-apps = [
@@ -68,6 +71,7 @@
     Dragging = true;
   };
 
+  # Global system preferences
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
     AppleInterfaceStyle = "Dark";
