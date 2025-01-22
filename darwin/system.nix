@@ -7,12 +7,23 @@
 
 {
   system.stateVersion = 5;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
 
-  # Necessary for using flakes on this system.
-  nix.settings.experimental-features = "nix-command flakes";
+    # Necessary for using flakes on this system.
+    settings.experimental-features = "nix-command flakes";
+
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      interval = {
+        Hour = 0; # Run at midnight
+      };
+      options = "--delete-older-than 30d";
+    };
+  };
 
   nixpkgs.config.allowUnsupportedSystem = true;
 
