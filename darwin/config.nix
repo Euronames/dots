@@ -18,12 +18,7 @@
     enableKeyMapping = true;
     remapCapsLockToControl = true;
     nonUS.remapTilde = true;
-    userKeyMapping = [
-      {
-        HIDKeyboardModifierMappingSrc = 233; # € key
-        HIDKeyboardModifierMappingDst = 219; # ¤ key
-      }
-    ];
+
   };
 
   system.defaults.finder = {
