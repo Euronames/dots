@@ -1,4 +1,11 @@
-{ inputs, config, pkgs, machineConfig, self, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  machineConfig,
+  self,
+  ...
+}:
 
 {
   nix-homebrew = {
@@ -20,7 +27,6 @@
       HOMEBREW_NO_ANALYTICS = "1";
     };
   };
-
 
   imports = [
     ./config.nix

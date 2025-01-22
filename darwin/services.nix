@@ -5,9 +5,7 @@
   # Auto upgrade packaged and the daemon service
   services.nix-daemon.enable = true;
 
-
   # services.skhd.enable = true;
-
 
   #Yabai window manager
   services.yabai.enable = true;

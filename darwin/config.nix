@@ -1,12 +1,16 @@
-{ pkgs, machineConfig, config, ... }:
 {
-  fonts.packages = with pkgs.nerd-fonts;
-    [
-      fira-code
-      meslo-lg
-      fira-mono
-      #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
-    ];
+  pkgs,
+  machineConfig,
+  config,
+  ...
+}:
+{
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-code
+    meslo-lg
+    fira-mono
+    #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
+  ];
 
   networking = {
     computerName = machineConfig.hostname;
@@ -59,11 +63,10 @@
     wvous-tr-corner = 1;
   };
 
-  system.defaults.trackpad =
-    {
-      Clicking = true;
-      Dragging = true;
-    };
+  system.defaults.trackpad = {
+    Clicking = true;
+    Dragging = true;
+  };
 
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
@@ -79,7 +82,7 @@
     AppleShowAllFiles = true;
     AppleShowAllExtensions = true;
     AppleShowScrollBars = "WhenScrolling";
-    "com.apple.mouse.tapBehavior" = 1; #Tap to click
+    "com.apple.mouse.tapBehavior" = 1; # Tap to click
     "com.apple.swipescrolldirection" = true;
     "com.apple.trackpad.forceClick" = false;
   };
