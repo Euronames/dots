@@ -16,6 +16,9 @@
       imports = [
         ./packages.nix
         ./dotfiles.nix
+        ./config/shell.nix 
+        ./config/git.nix
+        ./config/starship.nix
       ];
     };
   };
