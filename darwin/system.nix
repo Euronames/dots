@@ -2,6 +2,7 @@
   config,
   pkgs,
   self,
+  machineConfig,
   ...
 }:
 
@@ -13,7 +14,10 @@
     '';
 
     # Necessary for using flakes on this system.
-    settings.experimental-features = "nix-command flakes";
+    settings = {
+      experimental-features = "nix-command flakes";
+      trusted-users = [machineConfig.hostname]; 
+    };
 
     optimise.automatic = true;
     gc = {
@@ -21,7 +25,7 @@
       interval = {
         Hour = 0; # Run at midnight
       };
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 7d";
     };
   };
 
