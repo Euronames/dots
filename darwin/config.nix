@@ -5,11 +5,10 @@
   ...
 }:
 {
-  fonts.packages = with pkgs.nerd-fonts; [
+  # Fonts
+   fonts.packages = with pkgs.nerd-fonts; [
     fira-code
-    meslo-lg
     fira-mono
-    #(nerdfonts.override { fonts = [ "Meslo" "FiraCode" "FiraMono" ]; })
   ];
 
   # Network configuration
@@ -66,12 +65,15 @@
     wvous-tr-corner = 1;
   };
 
-  system.defaults.trackpad = {
-    Clicking = true;
-    Dragging = true;
-  };
+  system.defaults.trackpad =
+    {
+      Clicking = true;
+      Dragging = true;
+      TrackpadRightClick = true;  # enable two finger right click
+      TrackpadThreeFingerDrag = true;  # enable three finger drag
+    };
 
-  # Global system preferences
+  
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
     AppleInterfaceStyle = "Dark";
@@ -89,6 +91,35 @@
     "com.apple.mouse.tapBehavior" = 1; # Tap to click
     "com.apple.swipescrolldirection" = true;
     "com.apple.trackpad.forceClick" = false;
+    "com.apple.sound.beep.feedback" = 0;  # disable beep sound when pressing volume up/down key
+    AppleKeyboardUIMode = 3;  # Mode 3 enables full keyboard control.
+  };
+
+  system.defaults.CustomUserPreferences = {
+        ".GlobalPreferences" = {
+          # automatically switch to a new space when switching to the application
+          AppleSpacesSwitchOnActivate = true;
+        };
+
+        "com.apple.desktopservices" = {
+          # Avoid creating .DS_Store files on network or USB volumes
+          DSDontWriteNetworkStores = true;
+          DSDontWriteUSBStores = true;
+        };
+
+        "com.apple.screencapture" = {
+          location = "~/Desktop";
+          type = "png";
+        };
+
+        "com.apple.AdLib" = {
+          allowApplePersonalizedAdvertising = false;
+        };
+  };
+
+  system.defaults.loginwindow = {
+        GuestEnabled = false;  # disable guest user
+        SHOWFULLNAME = true;  # show full name in login window
   };
 
   #Disable mouse acceleration
