@@ -10,7 +10,7 @@
   fonts.packages = with pkgs.nerd-fonts; [
     fira-code
     fira-mono
-    (nerdfonts.override { fonts = [ "FiraCode" "FiraMono" ]; })
+    #(nerdfonts.override { fonts = [ "FiraCode" "FiraMono" ]; })
   ];
 
   # Network configuration

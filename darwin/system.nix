@@ -25,7 +25,7 @@
       interval = {
         Hour = 0; # Run at midnight
       };
-      options = lib.mkDefault "--delete-older-than 7d";
+      options = "--delete-older-than 7d";
     };
   };
 
