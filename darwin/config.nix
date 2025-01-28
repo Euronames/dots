@@ -5,12 +5,10 @@
   ...
 }:
 {
-  # nerdfonts
-  # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/pkgs/data/fonts/nerdfonts/shas.nix
-  fonts.packages = with pkgs.nerd-fonts; [
+  # Fonts
+   fonts.packages = with pkgs.nerd-fonts; [
     fira-code
     fira-mono
-    #(nerdfonts.override { fonts = [ "FiraCode" "FiraMono" ]; })
   ];
 
   # Network configuration
