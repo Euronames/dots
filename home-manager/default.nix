@@ -20,6 +20,7 @@
         ./config/git.nix
         ./config/starship.nix
         ./config/lsd.nix
+        ./config/autojump.nix
       ];
     };
   };
