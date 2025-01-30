@@ -42,6 +42,8 @@
         system = "aarch64-darwin";
         hostname = "MacBook-Pro";
         username = "jensnavne";
+        userName = "Jens Navne";
+        userEmail  = "jens.navne@gmail.com";
         home = "/Users/jensnavne";
         homeManager = {
           stateVersion = "23.05";
