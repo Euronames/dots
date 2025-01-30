@@ -4,8 +4,5 @@ programs.autojump = {
     enableZshIntegration = true;
     enableBashIntegration = false;
     enableFishIntegration = false;
-
-
-  
   };
 }
