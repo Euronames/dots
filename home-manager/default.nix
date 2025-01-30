@@ -19,8 +19,8 @@
         ./config/starship.nix
         ./config/lsd.nix
         ./config/autojump.nix
+        ./config/git.nix
         #./config/shell.nix 
-        #./config/git.nix
       ];
     };
   };
