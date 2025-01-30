@@ -1,6 +1,5 @@
 {
   lib,
-  machineConfig,
   ...
 }: {
   # `programs.git` will generate the config file: ~/.config/git/config

@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
-
+{ ... }:
 {
-
   # Auto upgrade packaged and the daemon service
   services.nix-daemon.enable = true;
 

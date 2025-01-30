@@ -1,13 +1,8 @@
 {
   inputs,
-  config,
-  pkgs,
   machineConfig,
-  self,
   ...
-}:
-
-{
+}: {
   nix-homebrew = {
     enable = true;
 
