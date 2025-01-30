@@ -16,11 +16,11 @@
       imports = [
         ./packages.nix
         ./dotfiles.nix
-        ./config/shell.nix 
-        ./config/git.nix
         ./config/starship.nix
-        ./config/lsd.nix
-        ./config/autojump.nix
+        #./config/shell.nix 
+        #./config/git.nix
+        #./config/lsd.nix
+        #./config/autojump.nix
       ];
     };
   };
