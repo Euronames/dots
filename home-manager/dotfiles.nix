@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   home = {
     #file."./.gitconfig".source = ./dotfiles/git/.gitconfig;
@@ -9,3 +9,4 @@
     file."./.warp/themes/norly.yaml".source = ./dotfiles/warp/themes/norly.yaml;
   };
 }
+

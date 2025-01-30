@@ -34,9 +34,6 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
-
-    #1Password Shell Plugins Flake
-    _1password-shell-plugins.url = "github:1Password/shell-plugins";
   };
 
   outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }@inputs:
@@ -59,7 +56,6 @@
         system = machineConfig.system;
         inherit pkgs;
         specialArgs = { inherit inputs machineConfig self; };
-
         modules = [
           ./darwin
           nix-homebrew.darwinModules.nix-homebrew
