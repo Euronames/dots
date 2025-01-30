@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # homebrew
+    # Homebrew
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +34,9 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
+    #1Password Shell Plugins Flake
+    _1password-shell-plugins.url = "github:1Password/shell-plugins";
   };
 
   outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }@inputs:
