@@ -1,7 +1,7 @@
 {...}: {
 programs.lsd = {
     enable = true;
-    enableAliases = true;
+    
     colors = {
       size = {
         large = "dark_yellow";

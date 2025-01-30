@@ -1,14 +1,13 @@
-{
-  ...
-}: {
+{ ... }: {
   programs.zsh  =  {
     enable  =  true;
     enableCompletion = true; 
 
+  
 
     autosuggestion = {
       enable = true; 
-      strategy = ["completion", "match_prev_cmd", "history"]
+      strategy = ["completion"];
     };
 
     history = {
@@ -21,74 +20,57 @@
       enable = true; 
     };
 
-    ohMyZsh  =  {
-      enable  =  true;
-      theme  =  "euro";
-      plugins  =  [
+    oh-my-zsh = {
+      enable = true;
+      #TODO: theme = "euro";
+      plugins = [
         "cp"
         "git"
         "1password"
         "autojump"
       ];
-    };
-
-    localVariables = {
-        # Disable asynchronous prompt in spaceship
-      SPACESHIP_PROMPT_ASYNC = FALSE
-    };
-
-    initExtraFirst  =  ''
-      #TODO: not needed? 
-      # Initialize starship prompt
-      #eval "$(starship init zsh)"
-    '';
+   };
+ 
 
     shellAliases  =  {
       ##########################
       ### Modifying existing ###
       ##########################
-      sudo = 'sudo ';
+      sudo = ''sudo '';
       mkdir = "mkdir -pv";
       mv = "mv -iv";
       cp = "cp -iv";
       du = "ncdu --color dark -rr -x --exclude .git --exclude node_modules";
-      rm = 'trash';
+      rm = ''trash'';
       ping = "prettyping";
       #cat = "bat --theme Nord";
-      vim = 'nvim';
-      vi = 'vim';
-      ls = 'lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date';
-      grep = 'rg --color = auto'; #Ripgrep
-      vscode = 'code';
-      o = 'open';
+      vim = ''nvim'';
+      vi = ''vim'';
+      ls = ''lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date'';
+      grep = ''rg --color = auto''; #Ripgrep
+      vscode = ''code'';
+      o = ''open'';
 
       ######################
       ### Custom aliases ###
       ######################
-      la = 'sudo lsd -lA -h --color always --date relative --icon always --icon-theme fancy --total-size';
+      la = ''sudo lsd -lA -h --color always --date relative --icon always --icon-theme fancy --total-size'';
       zshconfig = "vi ~/.zshrc ; echo 'Sourcing zsh file' ; source ~/.zshrc";
-      neofetch = 'clear && neofetch | lolcat';
-      cmatrix = 'cmatrix -C green';
+      neofetch = ''clear && neofetch | lolcat'';
+      cmatrix = ''cmatrix -C green'';
       dots = "git -C $DOTFILES add -A ; git -C $DOTFILES commit -m 'Changed stuff' ; git -C $DOTFILES push";
-      glog = 'git log --oneline --decorate';
-      reboot = 'sudo reboot';
-      sl = 'sl | lolcat';
+      glog = ''git log --oneline --decorate'';
+      reboot = ''sudo reboot'';
+      sl = ''sl | lolcat'';
       cya = "dots ; sudo shutdown -h now";
       up = "darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro";
-      c = 'code';
+      c = ''code'';
       pullall = "find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir = {}/.git --work-tree = $PWD/{} pull origin master \;";
       myip = "curl ipinfo.io/ip";
       ports = "netstat -t -u -l -a -n";
-      #status = 'watch -c git status';
-      #k = 'kubectl';
-      j = 'autojump';
-      #lazykube = 'k9s';
-      #t = 'terraform';
-      #py = 'python3';
-
     };
 
-    programs.zsh.initExtra = ''
+    initExtra = ''
     ############################
     #Make folder and cd into it#
     ############################

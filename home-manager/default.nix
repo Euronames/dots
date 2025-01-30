@@ -8,11 +8,9 @@
     backupFileExtension = "backup";
     users.${machineConfig.username} = {
       home.username = machineConfig.username;
-      # home.homeDirectory = home; # clashes with nix-darwin
-
       home.stateVersion = machineConfig.homeManager.stateVersion;
-      programs.zsh.oh-my-zsh.enable = true;
-
+      # home.homeDirectory = home; # clashes with nix-darwin
+       
       imports = [
         ./packages.nix
         ./dotfiles.nix
@@ -20,7 +18,7 @@
         ./config/lsd.nix
         ./config/autojump.nix
         ./config/git.nix
-        #./config/shell.nix 
+        ./config/shell.nix 
       ];
     };
   };
