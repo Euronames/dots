@@ -1,23 +1,22 @@
-{ ... }: {
-  programs.zsh  =  {
-    enable  =  true;
-    enableCompletion = true; 
-
-  
+{ ... }:
+{
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
 
     autosuggestion = {
-      enable = true; 
-      strategy = ["completion"];
+      enable = true;
+      strategy = [ "completion" ];
     };
 
     history = {
       ignoreDups = true;
-      expireDuplicatesFirst = true; 
+      expireDuplicatesFirst = true;
       size = 10000;
     };
 
     syntaxHighlighting = {
-      enable = true; 
+      enable = true;
     };
 
     oh-my-zsh = {
@@ -29,10 +28,9 @@
         "1password"
         "autojump"
       ];
-   };
- 
+    };
 
-    shellAliases  =  {
+    shellAliases = {
       ##########################
       ### Modifying existing ###
       ##########################
@@ -47,7 +45,7 @@
       vim = ''nvim'';
       vi = ''vim'';
       ls = ''lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date'';
-      grep = ''rg --color = auto''; #Ripgrep
+      grep = ''rg --color = auto''; # Ripgrep
       vscode = ''code'';
       o = ''open'';
 
@@ -71,44 +69,44 @@
     };
 
     initExtra = ''
-    ############################
-    #Make folder and cd into it#
-    ############################
-    function mkcd() {
-        if [[ "$1" ]]; then
-            mkdir "$1" && cd "$1"
-        fi
-    }
-    #############
-    #Git command#
-    #############
-    function skub() {
-        git pull
-        git add -A
+      ############################
+      #Make folder and cd into it#
+      ############################
+      function mkcd() {
+          if [[ "$1" ]]; then
+              mkdir "$1" && cd "$1"
+          fi
+      }
+      #############
+      #Git command#
+      #############
+      function skub() {
+          git pull
+          git add -A
 
-        if [ "$1" != "" ]; then
-            git commit -m "$1"
-        else
-            git commit -m "."
-        fi
-        git push
-    }
+          if [ "$1" != "" ]; then
+              git commit -m "$1"
+          else
+              git commit -m "."
+          fi
+          git push
+      }
 
-    ##############
-    #Convert file#
-    ##############
-    function to() {
-        if [ "$1" != "" ]; then
-            if [ "$2" != "" ]; then
-                unoconv -f "$1" "$2"
-                #rmf "$2"
-            else
-                echo "Need to specify file to convert...."
-            fi
-        else
-            echo "Need to specify what to convert to..."
-        fi
-    }
-  '';
+      ##############
+      #Convert file#
+      ##############
+      function to() {
+          if [ "$1" != "" ]; then
+              if [ "$2" != "" ]; then
+                  unoconv -f "$1" "$2"
+                  #rmf "$2"
+              else
+                  echo "Need to specify file to convert...."
+              fi
+          else
+              echo "Need to specify what to convert to..."
+          fi
+      }
+    '';
   };
 }

@@ -16,7 +16,7 @@
     # Necessary for using flakes on this system.
     settings = {
       experimental-features = "nix-command flakes";
-      trusted-users = [machineConfig.hostname]; 
+      trusted-users = [ machineConfig.hostname ];
     };
 
     optimise.automatic = true;

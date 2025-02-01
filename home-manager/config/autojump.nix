@@ -1,5 +1,6 @@
-{...}: {
-programs.autojump = {
+{ ... }:
+{
+  programs.autojump = {
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = false;

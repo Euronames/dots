@@ -5,7 +5,7 @@
 }:
 {
   # Fonts
-   fonts.packages = with pkgs.nerd-fonts; [
+  fonts.packages = with pkgs.nerd-fonts; [
     fira-code
     fira-mono
   ];
@@ -64,15 +64,13 @@
     wvous-tr-corner = 1;
   };
 
-  system.defaults.trackpad =
-    {
-      Clicking = true;
-      Dragging = true;
-      TrackpadRightClick = true;  # enable two finger right click
-      TrackpadThreeFingerDrag = true;  # enable three finger drag
-    };
+  system.defaults.trackpad = {
+    Clicking = true;
+    Dragging = true;
+    TrackpadRightClick = true; # enable two finger right click
+    TrackpadThreeFingerDrag = true; # enable three finger drag
+  };
 
-  
   system.defaults.NSGlobalDomain = {
     AppleICUForce24HourTime = true;
     AppleInterfaceStyle = "Dark";
@@ -90,35 +88,35 @@
     "com.apple.mouse.tapBehavior" = 1; # Tap to click
     "com.apple.swipescrolldirection" = true;
     "com.apple.trackpad.forceClick" = false;
-    "com.apple.sound.beep.feedback" = 0;  # disable beep sound when pressing volume up/down key
-    AppleKeyboardUIMode = 3;  # Mode 3 enables full keyboard control.
+    "com.apple.sound.beep.feedback" = 0; # disable beep sound when pressing volume up/down key
+    AppleKeyboardUIMode = 3; # Mode 3 enables full keyboard control.
   };
 
   system.defaults.CustomUserPreferences = {
-        ".GlobalPreferences" = {
-          # automatically switch to a new space when switching to the application
-          AppleSpacesSwitchOnActivate = true;
-        };
+    ".GlobalPreferences" = {
+      # automatically switch to a new space when switching to the application
+      AppleSpacesSwitchOnActivate = true;
+    };
 
-        "com.apple.desktopservices" = {
-          # Avoid creating .DS_Store files on network or USB volumes
-          DSDontWriteNetworkStores = true;
-          DSDontWriteUSBStores = true;
-        };
+    "com.apple.desktopservices" = {
+      # Avoid creating .DS_Store files on network or USB volumes
+      DSDontWriteNetworkStores = true;
+      DSDontWriteUSBStores = true;
+    };
 
-        "com.apple.screencapture" = {
-          location = "~/Desktop";
-          type = "png";
-        };
+    "com.apple.screencapture" = {
+      location = "~/Desktop";
+      type = "png";
+    };
 
-        "com.apple.AdLib" = {
-          allowApplePersonalizedAdvertising = false;
-        };
+    "com.apple.AdLib" = {
+      allowApplePersonalizedAdvertising = false;
+    };
   };
 
   system.defaults.loginwindow = {
-        GuestEnabled = false;  # disable guest user
-        SHOWFULLNAME = true;  # show full name in login window
+    GuestEnabled = false; # disable guest user
+    SHOWFULLNAME = true; # show full name in login window
   };
 
   #Disable mouse acceleration

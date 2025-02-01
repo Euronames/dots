@@ -1,7 +1,8 @@
 {
   machineConfig,
   ...
-}: {
+}:
+{
   environment.variables = {
     DOTFILES = "${machineConfig.home}/Projects/dots";
     ZSH = "${machineConfig.home}/.oh-my-zsh";

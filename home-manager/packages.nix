@@ -24,7 +24,8 @@
     # Development Tools
     git # Version control system
     neovim # Modern vim text editor
-    nil # Nix language server
+    nixd
+    #nil # Nix language server
     nixfmt-rfc-style # Nix code formatter
 
     # Search and Data Processing
