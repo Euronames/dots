@@ -44,7 +44,6 @@
       "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
       #"${pkgs.spotify}/Applications/Spotify.app"
       "/Applications/Spotify.app"
-
     ];
 
     appswitcher-all-displays = true;
