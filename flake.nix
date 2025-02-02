@@ -71,9 +71,9 @@
         specialArgs = { inherit inputs machineConfig self; };
         modules = [
           ./darwin
+          ./home-manager
           nix-homebrew.darwinModules.nix-homebrew
           home-manager.darwinModules.home-manager
-          (import ./home-manager)
         ];
       };
     };
