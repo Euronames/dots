@@ -14,7 +14,6 @@
 
   programs.git = {
     enable = true;
-
     userName = machineConfig.userName;
     userEmail = machineConfig.userEmail;
 
