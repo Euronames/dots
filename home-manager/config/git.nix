@@ -14,8 +14,7 @@
 
   programs.git = {
     enable = true;
-    userName = machineConfig.userName;
-    userEmail = machineConfig.userEmail;
+    inherit (machineConfig) userName userEmail;
 
     signing = {
       gpgPath = "\${pkgs.gnupg}/bin/gpg2";

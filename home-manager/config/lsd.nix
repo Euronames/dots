@@ -1,5 +1,4 @@
-{ ... }:
-{
+args: {
   programs.lsd = {
     enable = true;
 

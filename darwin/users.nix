@@ -2,7 +2,7 @@
 
 {
   users.users.${machineConfig.username} = {
+    inherit (machineConfig) home;
     name = machineConfig.username;
-    home = machineConfig.home;
   };
 }

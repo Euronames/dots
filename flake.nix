@@ -1,4 +1,6 @@
 {
+  description = "My macOS Nix configuration with nix-darwin and home-manager";
+
   inputs = {
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -36,24 +38,35 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, nix-homebrew, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nix-darwin,
+      home-manager,
+      nix-homebrew,
+      ...
+    }@inputs:
     let
       machineConfig = {
         system = "aarch64-darwin";
         hostname = "MacBook-Pro";
         username = "jensnavne";
         userName = "Jens Navne";
-        userEmail  = "jens.navne@gmail.com";
+        userEmail = "jens.navne@gmail.com";
         home = "/Users/jensnavne";
         homeManager = {
           stateVersion = "23.05";
         };
       };
-      pkgs = import nixpkgs { system = machineConfig.system; config.allowUnfree = true; };
+      pkgs = import nixpkgs {
+        inherit (machineConfig) system;
+        config.allowUnfree = true;
+      };
     in
     {
       darwinConfigurations.${machineConfig.hostname} = nix-darwin.lib.darwinSystem {
-        system = machineConfig.system;
+        inherit (machineConfig) system;
         inherit pkgs;
         specialArgs = { inherit inputs machineConfig self; };
         modules = [

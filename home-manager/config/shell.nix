@@ -1,5 +1,4 @@
-{ ... }:
-{
+args: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
