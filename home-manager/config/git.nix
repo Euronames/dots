@@ -14,9 +14,9 @@
 
   programs.git = {
     enable = true;
-    #TODO: machineConfig?
-    userEmail = machineConfig.hostname;
-    userName = "jens.navne@gmail.com"; # machineConfig.userName;
+
+    userName = machineConfig.userName;
+    userEmail = machineConfig.userEmail;
 
     signing = {
       gpgPath = "\${pkgs.gnupg}/bin/gpg2";

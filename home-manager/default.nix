@@ -3,9 +3,14 @@
 { machineConfig, ... }:
 {
   home-manager = {
-    useGlobalPkgs = true;
+    extraSpecialArgs = {
+      inherit machineConfig;
+    };
+
     useUserPackages = true;
+    useGlobalPkgs = true;
     backupFileExtension = "backup";
+
     users.${machineConfig.username} = {
       home.username = machineConfig.username;
       home.stateVersion = machineConfig.homeManager.stateVersion;
