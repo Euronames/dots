@@ -1,26 +1,59 @@
 #!/bin/sh
 
-install_nix() {
-  echo "Installing Nix..."
-  diskutil list >/dev/null || export PATH="/usr/sbin:$PATH"
-  curl -L https://nixos.org/nix/install | sh -s -- --darwin-use-unencrypted-nix-store-volume --daemon || exit 1
-  echo "Nix installed."
-}
+set -e          # Exit on error
+set -u          # Treat unset variables as an error
+set -o pipefail # Exit on first failed command in a pipeline
 
-install_darwin_build() {
-  echo "Installing nix-darwin..."
-  nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer || exit 1
-  ./result/bin/darwin-installer || exit 1
-  rm -r ./result
-  echo "nix-darwin installed."
-}
+echo "🚀 Starting bootstrap script..."
 
-echo "Skipping link" || ln -s . ~/.nixpkgs || exit 1
+# Ensure we are in the repo root
+cd "$(dirname "$0")"
 
-nix-build --version || install_nix || exit 1
-nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager || exit 1
-nix-channel --update || exit 1
+# --- 1. Install Nix ---
+if
+  ! command -v nix &
+  >/dev/null
+then
+  echo "📦 Installing Nix..."
+  curl -L https://nixos.org/nix/install | sh
+  . ~/.nix-profile/etc/profile.d/nix.sh
+else
+  echo "✅ Nix is already installed."
+fi
 
-darwin-rebuild changelog || install_darwin_build || exit 1
+# --- 2. Enable Flakes and Experimental Features ---
+echo "🔧 Configuring Nix..."
+mkdir -p ~/.config/nix
+cat <<EOF >~/.config/nix/nix.conf
+experimental-features = nix-command flakes
+EOF
 
-NIX_PATH="darwin-config=$HOME/Projects/dots:$HOME/.nixpkgs/darwin-configuration.nix:/nix/var/nix/profiles/per-user/$USER/channels:$NIX_PATH" darwin-rebuild switch || exit 1
+# --- 3. Install nix-darwin ---
+if
+  ! command -v darwin-rebuild &
+  >/dev/null
+then
+  echo "🍏 Installing nix-darwin..."
+  nix run nixpkgs#darwin-rebuild switch --flake .#MacBook-Pro
+else
+  echo "✅ nix-darwin is already installed."
+fi
+
+# --- 4. Apply System Configurations ---
+echo "⚙️ Applying dotfile configurations..."
+darwin-rebuild switch --flake .#MacBook-Pro
+
+# --- 5. Verify Installation ---
+echo "✅ Installation complete! Verifying setup..."
+nix --version
+
+if
+  command -v darwin-rebuild &
+  >/dev/null
+then
+  echo "✅ nix-darwin is installed: $(command -v darwin-rebuild)"
+else
+  echo "❌ nix-darwin is not installed!"
+fi
+
+echo "🚀 Bootstrap complete! Restart your terminal for full effect."
