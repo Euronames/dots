@@ -7,7 +7,6 @@
 }:
 
 {
-  system.stateVersion = 5;
   nix = {
     extraOptions = ''
       experimental-features = nix-command flakes
@@ -29,24 +28,33 @@
     };
   };
 
-  nixpkgs.config.allowUnsupportedSystem = true;
+  nixpkgs = {
+    config.allowUnsupportedSystem = true;
 
-  # Git commit hash for the configuration revision
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+    # Platform specification
+    hostPlatform = machineConfig.system;
+  };
 
-  # Platform specification
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  system = {
+    stateVersion = 5;
 
-  #Fixing spotlight
-  system.activationScripts.applications = import ./spotlightFix.nix { inherit pkgs config; };
+    # Git commit hash for the configuration revision
+    configurationRevision = self.rev or self.dirtyRev or null;
+
+    activationScripts = {
+      #Fixing spotlight
+      applications = import ./spotlightFix.nix { inherit pkgs config; };
+
+      # Following line should allow us to avoid a logout/login cycle
+      postUserActivation.text = ''
+        /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+        echo >&2 "Switching wallpapers..."
+        /usr/local/bin/desktoppr "$HOME/Projects/dots/darwin/assets/wallpaper.png"
+      '';
+    };
+  };
 
   homebrew = import ./homebrew.nix;
 
-  # Following line should allow us to avoid a logout/login cycle
-  system.activationScripts.postUserActivation.text = ''
-    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-
-    echo >&2 "Switching wallpapers..."
-    /usr/local/bin/desktoppr "$HOME/Projects/dots/darwin/assets/wallpaper.png"
-  '';
 }
