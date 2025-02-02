@@ -1,5 +1,6 @@
 {
   lib,
+  machineConfig,
   ...
 }:
 {
@@ -14,7 +15,7 @@
   programs.git = {
     enable = true;
     #TODO: machineConfig?
-    userEmail = "Jens Navne"; # machineConfig.userEmail;
+    userEmail = machineConfig.hostname;
     userName = "jens.navne@gmail.com"; # machineConfig.userName;
 
     signing = {
@@ -25,7 +26,6 @@
 
     extraConfig = {
       gpg.format = "ssh";
-      #TODO: Need to specify correct 1P paths...
       gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
       commit = {
         gpgSign = true;

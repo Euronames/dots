@@ -21,7 +21,6 @@
 
     oh-my-zsh = {
       enable = true;
-      #TODO: theme = "euro";
       plugins = [
         "cp"
         "git"
