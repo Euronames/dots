@@ -47,7 +47,7 @@
     raycast # Spotlight replacement and productivity tool
     vscode # Code editor
     _1password-cli # Password manager CLI
-    whatsapp-for-mac # WhatsApp desktop client
+    #whatsapp-for-mac # WhatsApp desktop client
     #_1password-gui            # Marked as broken
     #spotify
     #warp-terminal

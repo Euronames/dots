@@ -23,7 +23,6 @@
 
   imports = [
     ./config.nix
-    ./services.nix
     ./users.nix
     ./system.nix
     ./environment.nix
