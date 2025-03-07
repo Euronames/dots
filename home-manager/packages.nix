@@ -61,5 +61,6 @@
     # macOS System Integration
     mas # Mac App Store CLI
     mkalias # Create macOS aliases
+
   ];
 }
