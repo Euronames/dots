@@ -1,7 +1,8 @@
 args: {
   programs.autojump = {
-    enable = true;
-    enableZshIntegration = true;
+    #TODO: disable, replacing with zoxide
+    enable = false;
+    enableZshIntegration = false;
     enableBashIntegration = false;
     enableFishIntegration = false;
   };

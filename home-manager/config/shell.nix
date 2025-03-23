@@ -24,7 +24,6 @@ args: {
         "cp"
         "git"
         "1password"
-        "autojump"
       ];
     };
 

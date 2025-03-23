@@ -23,7 +23,9 @@
         ./config/shell.nix
         ./config/starship.nix
         ./config/lsd.nix
-        ./config/autojump.nix
+        ./config/fzf.nix
+        ./config/zoxide.nix
+        ./config/lazygit.nix
       ];
     };
   };
