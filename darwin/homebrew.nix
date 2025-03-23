@@ -1,6 +1,6 @@
 {
   enable = true;
-  #caskArgs.no_quarantine = false;
+  caskArgs.no_quarantine = true;
 
   onActivation = {
     cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
