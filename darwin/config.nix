@@ -95,6 +95,30 @@
         AppleKeyboardUIMode = 3; # Mode 3 enables full keyboard control.
       };
 
+      # Menu bar settings
+      menuExtraClock = {
+        Show24Hour = true;
+        ShowAMPM = false;
+        ShowDate = 1;
+        ShowDayOfMonth = true;
+        ShowDayOfWeek = true;
+        ShowSeconds = false;
+      };
+
+      # Software Update settings
+      SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+
+      # Spaces and Mission Control settings
+      spaces = {
+        spans-displays = false;
+      };
+
+      # Universal Access settings
+      universalaccess = {
+        reduceTransparency = false;
+        closeViewScrollWheelToggle = true;
+      };
+
       CustomUserPreferences = {
         ".GlobalPreferences" = {
           # automatically switch to a new space when switching to the application
