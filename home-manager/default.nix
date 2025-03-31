@@ -19,6 +19,7 @@
       imports = [
         ./packages.nix
         ./dotfiles.nix
+        ./config/ssh.nix
         ./config/git.nix
         ./config/shell.nix
         ./config/starship.nix
