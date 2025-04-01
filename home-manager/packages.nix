@@ -24,6 +24,7 @@
 
     # Development Tools
     git # Version control system
+    diff-so-fancy # Good-looking diffs filter for git
     neovim # Modern vim text editor
     nixd
     #nil # Nix language server
