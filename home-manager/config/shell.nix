@@ -54,7 +54,6 @@ args: {
       neofetch = ''clear && neofetch | lolcat'';
       cmatrix = ''cmatrix -C green'';
       dots = "git -C $DOTFILES add -A ; git -C $DOTFILES commit -m 'Changed stuff' ; git -C $DOTFILES push";
-      glog = ''git log --oneline --decorate'';
       reboot = ''sudo reboot'';
       sl = ''sl | lolcat'';
       cya = "dots ; sudo shutdown -h now";
