@@ -56,6 +56,7 @@
     #spotify
     #warp-terminal
     #arc-browser
+    brave # Browser
 
     # macOS UI Enhancements
     hidden-bar # Menu bar icon management
