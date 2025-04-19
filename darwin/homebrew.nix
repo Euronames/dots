@@ -21,6 +21,7 @@
     "vlc" # Media player
     "desktoppr" # Read and set wallpaper: https://github.com/scriptingosx/desktoppr
     "messenger" # Facebook messenger client
+    "brave-browser" # Browser
   ];
   taps = [
   ];
