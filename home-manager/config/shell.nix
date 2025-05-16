@@ -38,10 +38,9 @@ args: {
       du = "ncdu --color dark -rr -x --exclude .git --exclude node_modules";
       rm = ''trash'';
       ping = "prettyping";
-      #cat = "bat --theme Nord";
+      cat = "bat --theme Nord";
       vim = ''nvim'';
-      vi = ''vim'';
-      #ls = ''lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date'';
+      vi = ''nvim'';
       grep = ''rg --color = auto''; # Ripgrep
       vscode = ''code'';
       o = ''open'';
@@ -49,7 +48,6 @@ args: {
       ######################
       ### Custom aliases ###
       ######################
-      #la = ''sudo lsd -lA -h --color always --date relative --icon always --icon-theme fancy --total-size'';
       zshconfig = "vi ~/.zshrc ; echo 'Sourcing zsh file' ; source ~/.zshrc";
       neofetch = ''clear && neofetch | lolcat'';
       cmatrix = ''cmatrix -C green'';
@@ -62,6 +60,7 @@ args: {
       pullall = "find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir = {}/.git --work-tree = $PWD/{} pull origin master \;";
       myip = "curl ipinfo.io/ip";
       ports = "netstat -t -u -l -a -n";
+      lg = "lazygit";
     };
 
     initContent = ''
