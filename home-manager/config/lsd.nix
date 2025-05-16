@@ -10,6 +10,7 @@ args: {
       };
     };
 
+    # https://github.com/lsd-rs/lsd?tab=readme-ov-file#config-file-content
     settings = {
       classic = false;
       blocks = [
