@@ -41,7 +41,7 @@ args: {
       #cat = "bat --theme Nord";
       vim = ''nvim'';
       vi = ''vim'';
-      ls = ''lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date'';
+      #ls = ''lsd -a -l -h --color always --no-symlink --icon always --icon-theme fancy --blocks name,size,date'';
       grep = ''rg --color = auto''; # Ripgrep
       vscode = ''code'';
       o = ''open'';
@@ -49,7 +49,7 @@ args: {
       ######################
       ### Custom aliases ###
       ######################
-      la = ''sudo lsd -lA -h --color always --date relative --icon always --icon-theme fancy --total-size'';
+      #la = ''sudo lsd -lA -h --color always --date relative --icon always --icon-theme fancy --total-size'';
       zshconfig = "vi ~/.zshrc ; echo 'Sourcing zsh file' ; source ~/.zshrc";
       neofetch = ''clear && neofetch | lolcat'';
       cmatrix = ''cmatrix -C green'';
@@ -64,7 +64,7 @@ args: {
       ports = "netstat -t -u -l -a -n";
     };
 
-    initExtra = ''
+    initContent = ''
       ############################
       #Make folder and cd into it#
       ############################

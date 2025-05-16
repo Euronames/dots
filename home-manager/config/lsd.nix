@@ -11,11 +11,24 @@ args: {
     };
 
     settings = {
+      classic = false;
+      blocks = [
+        "name"
+        "size"
+        "date"
+      ];
       date = "relative";
+      dereference = false;
+      display = "all";
       ignore-globs = [
         ".git"
         ".hg"
       ];
+      layout = "oneline";
+      size = "default";
+      no-symlink = true;
+      hyperlink = "auto";
+
     };
 
   };
