@@ -29,6 +29,7 @@
         ./config/lazygit.nix
         ./userScripts/setWallpaper.nix
         ./userScripts/setScreenshotsLocation.nix
+        ./userScripts/filevaultCheck.nix
         ./userScripts/restartUi.nix
       ];
     };
