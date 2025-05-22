@@ -55,7 +55,7 @@ args: {
       reboot = ''sudo reboot'';
       sl = ''sl | lolcat'';
       cya = "dots ; sudo shutdown -h now";
-      up = "cd $DOTFILES && nix flake check && nix flake update && darwin-rebuild switch --flake .#MacBook-Pro && cd -";
+      up = "cd $DOTFILES && nix flake check && nix flake update && sudo darwin-rebuild switch --flake .#MacBook-Pro && cd -";
       c = ''code'';
       pullall = "find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir = {}/.git --work-tree = $PWD/{} pull origin master \;";
       myip = "curl ipinfo.io/ip";

@@ -14,4 +14,4 @@
 # @raycast.author Euronames
 # @raycast.authorURL https://raycast.com/Euronames
 
-darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
+sudo darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro

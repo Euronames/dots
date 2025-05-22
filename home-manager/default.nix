@@ -27,6 +27,9 @@
         ./config/fzf.nix
         ./config/zoxide.nix
         ./config/lazygit.nix
+        ./userScripts/setWallpaper.nix
+        ./userScripts/setScreenshotsLocation.nix
+        ./userScripts/restartUi.nix
       ];
     };
   };

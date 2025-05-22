@@ -30,7 +30,7 @@ EOF
 
 # --- 3. Install nix-darwin ---
 if
-  ! command -v darwin-rebuild &
+  ! command -v sudo darwin-rebuild &
   >/dev/null
 then
   echo "🍏 Installing nix-darwin..."
@@ -41,17 +41,17 @@ fi
 
 # --- 4. Apply System Configurations ---
 echo "⚙️ Applying dotfile configurations..."
-darwin-rebuild switch --flake .#MacBook-Pro
+sudo darwin-rebuild switch --flake .#MacBook-Pro
 
 # --- 5. Verify Installation ---
 echo "✅ Installation complete! Verifying setup..."
 nix --version
 
 if
-  command -v darwin-rebuild &
+  command -v sudo darwin-rebuild &
   >/dev/null
 then
-  echo "✅ nix-darwin is installed: $(command -v darwin-rebuild)"
+  echo "✅ nix-darwin is installed: $(command -v sudo darwin-rebuild)"
 else
   echo "❌ nix-darwin is not installed!"
 fi

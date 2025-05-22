@@ -25,7 +25,7 @@ This repository contains my personal dotfiles, customized for setting up and man
    - Apply the full configuration using `nix-darwin`:
 
      ```bash
-     darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
+     sudo darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
      ```
 
 3. **Manual Steps**
@@ -70,13 +70,13 @@ Ensure the following tools and frameworks are installed before applying the conf
 
      ```bash
      nix flake check
-     darwin-rebuild check
+     sudo darwin-rebuild check
      ```
 
    - Apply the configuration:
 
      ```bash
-     darwin-rebuild switch --flake ./path-to-dotfiles#hostname
+     sudo darwin-rebuild switch --flake ./path-to-dotfiles#hostname
      ```
 
 ---
