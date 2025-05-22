@@ -20,6 +20,7 @@
 
     optimise.automatic = true;
     gc = {
+      # Garbage collection
       automatic = true;
       interval = {
         Hour = 0; # Run at midnight
@@ -50,7 +51,6 @@
     };
 
     activationScripts = {
-      #Fixing spotlight
       spotlightFix = import ./systemScripts/spotlightFix.nix { inherit pkgs config; };
       power = import ./systemScripts/power.nix;
     };
