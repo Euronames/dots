@@ -26,6 +26,5 @@
     ./users.nix
     ./system.nix
     ./environment.nix
-    ./users.nix
   ];
 }
