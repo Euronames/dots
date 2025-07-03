@@ -46,13 +46,12 @@
       # Dock configuration
       dock = {
         autohide = true;
+        # NOTE: Some apps are referenced by absolute path because they are installed via Homebrew Cask, not Nix.
+        # To ensure these apps are present, make sure to install them with Homebrew.
         persistent-apps = [
-          #"${pkgs.arc-browser}/Applications/Arc.app"
           "/Applications/Arc.app"
-          #"${pkgs.warp-terminal}/Applications/Warp.app"
           "/Applications/Warp.app"
           "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
-          #"${pkgs.spotify}/Applications/Spotify.app"
           "/Applications/Spotify.app"
         ];
 
