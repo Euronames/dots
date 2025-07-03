@@ -1,5 +1,6 @@
 {
   machineConfig,
+  pkgs,
   ...
 }:
 {
@@ -8,8 +9,9 @@
     ZSH = "${machineConfig.home}/.oh-my-zsh";
     LOCALBIN = "${machineConfig.home}/.local/bin";
     STARSHIP_CONFIG = "${machineConfig.home}/.config/starship.toml";
-    EDITOR = "code";
-    VISUAL = "nvim";
+    # Use Nix-managed editors to ensure presence
+    EDITOR = "${pkgs.vscode}/bin/code";
+    VISUAL = "${pkgs.neovim}/bin/nvim";
 
     #Color of the font preview window
     FONTPREVIEW_BG_COLOR = "#2e3440";
