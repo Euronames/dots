@@ -15,6 +15,12 @@
     computerName = machineConfig.hostname;
     hostName = machineConfig.hostname;
     localHostName = machineConfig.hostname;
+
+    applicationFirewall = {
+      enable = true;
+      enableStealthMode = true;
+      blockAllIncoming = true;
+    };
   };
 
   system = {

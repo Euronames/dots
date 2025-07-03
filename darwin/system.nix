@@ -42,14 +42,6 @@
     # Git commit hash for the configuration revision
     configurationRevision = self.rev or self.dirtyRev or null;
 
-    defaults = {
-      alf = {
-        globalstate = 1; # Firewall on
-        stealthenabled = 1; # Stealth mode on
-      };
-
-    };
-
     activationScripts = {
       spotlightFix = import ./systemScripts/spotlightFix.nix { inherit pkgs config; };
       power = import ./systemScripts/power.nix;
