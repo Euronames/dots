@@ -49,7 +49,7 @@
         # NOTE: Some apps are referenced by absolute path because they are installed via Homebrew Cask, not Nix.
         # To ensure these apps are present, make sure to install them with Homebrew.
         persistent-apps = [
-          "/Applications/Arc.app"
+          "/Applications/Zen.app"
           "/Applications/Warp.app"
           "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
           "/Applications/Spotify.app"

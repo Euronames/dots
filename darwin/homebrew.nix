@@ -15,7 +15,8 @@
   ];
   casks = [
     "warp" # Terminal
-    "arc" # Browser
+    #"arc" # Browser
+    "zen" # Distraction-free browser
     "1password" # Password manager
     "spotify" # Music streaming
     "vlc" # Media player
