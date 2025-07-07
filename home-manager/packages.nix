@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 {
   home.packages = with pkgs; [
     # Shell and Terminal
@@ -66,6 +69,5 @@
     # macOS System Integration
     mas # Mac App Store CLI
     mkalias # Create macOS aliases
-
   ];
 }
