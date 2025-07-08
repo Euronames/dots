@@ -119,10 +119,10 @@
       };
 
       # Universal Access settings
-      universalaccess = {
-        reduceTransparency = false;
-        closeViewScrollWheelToggle = true;
-      };
+      # universalaccess = {
+      #   reduceTransparency = false;
+      #   closeViewScrollWheelToggle = true;
+      # };
 
       CustomUserPreferences = {
         ".GlobalPreferences" = {
