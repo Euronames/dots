@@ -51,7 +51,7 @@
     sl # Steam Locomotive, fun error correction for 'ls'
 
     # macOS Applications
-    raycast # Spotlight replacement and productivity tool
+    #raycast # Spotlight replacement and productivity tool
     vscode # Code editor
     _1password-cli # Password manager CLI
     #whatsapp-for-mac # WhatsApp desktop client
