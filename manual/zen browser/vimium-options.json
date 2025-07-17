@@ -1,0 +1,11 @@
+{
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\n# g: https://www.google.com/search?q=%s Google\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n# y: https://www.youtube.com/results?search_query=%s Youtube\n# gm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\n# d: https://duckduckgo.com/?q=%s DuckDuckGo\n# az: https://www.amazon.com/s/?field-keywords=%s Amazon\n# qw: https://www.qwant.com/?q=%s Qwant",
+  "settingsVersion": "2.3",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n    /* linkhint boxes */\n    background: -webkit-gradient(linear, left top, left bottom,\n        color-stop(0%, #3B4252),  /* nord1 - dark background */\n        color-stop(100%, #434C5E)); /* nord2 - slightly lighter */\n    border: 1px solid #4C566A; /* nord3 - muted border */\n}\n\ndiv > .vimiumHintMarker span {\n    /* linkhint text */\n    color: #d8dee9; /* nord6 - bright text */\n    font-weight: bold;\n    font-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n    color: #b48ead; /* nord7 - teal accent for matched chars */\n}",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/"
+    }
+  ]
+}
