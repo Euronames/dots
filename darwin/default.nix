@@ -10,7 +10,7 @@
     user = machineConfig.username;
     taps = with inputs; {
       "homebrew/homebrew-core" = homebrew-core;
-      "homebrew/homebrew-bundle" = homebrew-bundle; # https://github.com/zhaofengli/nix-homebrew/issues/9#issuecomment-1774684583
+      "homebrew/homebrew-bundle" = homebrew-bundle;
       "homebrew/homebrew-cask" = homebrew-cask;
     };
 
