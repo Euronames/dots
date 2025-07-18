@@ -50,6 +50,6 @@
 
   power.sleep.display = 15;
 
-  homebrew = import ./homebrew.nix;
+  homebrew = import ./homebrew.nix { inherit config; };
 
 }

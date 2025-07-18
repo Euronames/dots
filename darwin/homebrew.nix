@@ -1,11 +1,22 @@
 {
+  config,
+  ...
+}:
+{
   enable = true;
   caskArgs.no_quarantine = true;
 
   onActivation = {
     cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
+    # NOTE: Homebrew may emit a warning about refusing to untap homebrew/cask if any casks are still installed.
+    # This is expected and does not affect your system. All casks are managed declaratively below.
+    # You can safely ignore this warning.
     autoUpdate = true;
     upgrade = true;
+  };
+
+  global = {
+    brewfile = true;
   };
 
   masApps = { };
@@ -23,7 +34,5 @@
     "desktoppr" # Read and set wallpaper: https://github.com/scriptingosx/desktoppr
     "messenger" # Facebook messenger client
   ];
-  taps = [
-  ];
-
+  taps = builtins.attrNames config.nix-homebrew.taps;
 }
