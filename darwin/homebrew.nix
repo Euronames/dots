@@ -14,6 +14,7 @@
     "unoconv" # Universal converter: https://github.com/unoconv/unoconv
   ];
   casks = [
+    "raycast" # Spotlight replacement and productivity tool
     "warp" # Terminal
     "zen" # Distraction-free browser
     "1password" # Password manager
@@ -21,7 +22,6 @@
     "vlc" # Media player
     "desktoppr" # Read and set wallpaper: https://github.com/scriptingosx/desktoppr
     "messenger" # Facebook messenger client
-    "brave-browser" # Browser
   ];
   taps = [
   ];
