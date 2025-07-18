@@ -31,5 +31,5 @@
     "desktoppr" # Read and set wallpaper: https://github.com/scriptingosx/desktoppr
     "messenger" # Facebook messenger client
   ];
-  taps = builtins.attrNames config.nix-homebrew.taps;
+  taps = builtins.attrNames config.nix-homebrew.taps; # taps from nix-homebrew module
 }
