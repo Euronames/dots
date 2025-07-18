@@ -8,9 +8,6 @@
 
   onActivation = {
     cleanup = "zap"; # invokes --zap on `darwin-rebuild switch`
-    # NOTE: Homebrew may emit a warning about refusing to untap homebrew/cask if any casks are still installed.
-    # This is expected and does not affect your system. All casks are managed declaratively below.
-    # You can safely ignore this warning.
     autoUpdate = true;
     upgrade = true;
   };
