@@ -44,13 +44,6 @@
           loadingText = "Loading commitizen...";
         }
         {
-          key = "b";
-          command = "hub browse";
-          description = "Open repository in browser";
-          context = "global";
-          loadingText = "Opening repository in browser...";
-        }
-        {
           key = "n";
           command = "git now --all";
           description = "Run git-now";
