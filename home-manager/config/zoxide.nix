@@ -3,7 +3,6 @@
 {
   programs.zoxide = {
     enable = true;
-    #enableZshIntegration = true;
     enableFishIntegration = true;
     # Options for zoxide
     options = [
