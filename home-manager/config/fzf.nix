@@ -3,7 +3,6 @@
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
-    #enableZshIntegration = true;
 
     # Default command to use when input is tty
     defaultCommand = "rg --files --hidden --follow --glob '!.git/*'";

@@ -17,9 +17,6 @@
       end
     '';
 
-    # You can still use interactiveShellInit for things that are safe to run after all conf.d scripts
-    # interactiveShellInit = "";
-
     shellAliases = {
       sudo = "sudo ";
       mkdir = "mkdir -pv";
