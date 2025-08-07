@@ -50,7 +50,7 @@
         # To ensure these apps are present, make sure to install them with Homebrew.
         persistent-apps = [
           "/Applications/Zen.app"
-          "/Applications/Warp.app"
+          "/Applications/Ghostty.app"
           "${pkgs.vscode}/Applications/Visual\ Studio\ Code.app"
           "/Applications/Spotify.app"
         ];

@@ -5,6 +5,7 @@
 {
   home.packages = with pkgs; [
     # Shell and Terminal
+    fish # Friendly interactive shell
     zsh # Popular shell with advanced features
     oh-my-zsh # Framework for managing zsh configuration
     zsh-fzf-history-search # Fuzzy history search for zsh
@@ -57,7 +58,6 @@
     #whatsapp-for-mac # WhatsApp desktop client
     #_1password-gui            # Marked as broken
     #spotify
-    #warp-terminal
     #arc-browser
     #brave # Browser
 

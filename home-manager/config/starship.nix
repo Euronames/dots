@@ -1,6 +1,7 @@
 args: {
   programs.starship = {
     enable = true;
+    enableFishIntegration = true;
     settings = {
       # General settings
       add_newline = false;

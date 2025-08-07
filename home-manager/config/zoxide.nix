@@ -3,8 +3,8 @@
 {
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true;
-
+    #enableZshIntegration = true;
+    enableFishIntegration = true;
     # Options for zoxide
     options = [
       # Default to using 'cd' as command name instead of 'z'

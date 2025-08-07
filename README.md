@@ -6,7 +6,7 @@ This repository contains my personal dotfiles, customized for setting up and man
 
 - **MacOS Configuration**: Streamlined setup for macOS using Nix and Home Manager.
 - **Package Management**: Includes a curated list of tools and applications.
-- **Custom Dotfiles**: Configurations for Zsh, Starship, Warp, and more.
+- **Custom Dotfiles**: Configurations for Shell, Starship and more.
 
 ---
 
@@ -27,14 +27,6 @@ This repository contains my personal dotfiles, customized for setting up and man
      ```bash
      sudo darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
      ```
-
-3. **Manual Steps**
-
-   - Import the Raycast configuration manually.
-   - Apply the custom Norly theme for Warp:
-     1. Open Warp.
-     2. Navigate to **Settings > Themes**.
-     3. Select or import the `norly.yaml` theme file.
 
 ---
 
@@ -60,11 +52,8 @@ Ensure the following tools and frameworks are installed before applying the conf
      - The `services.nix` file assumes the Nix Daemon (`nix-daemon`) is enabled.
    - **`zsh.nix`**:
      - Installs and configures Zsh. Ensure Zsh plugins such as `zsh-autosuggestions` are available.
-4. **Optional Tools**:
 
-   - **Spotlight Fix**: If using `spotlightFix.nix`, confirm it is compatible with the current macOS version and Spotlight configuration.
-   - **Warp Theme**: Requires the Warp terminal to apply custom themes.
-5. **Recommended Commands**:
+4. **Recommended Commands**:
 
    - Validate the configuration:
 

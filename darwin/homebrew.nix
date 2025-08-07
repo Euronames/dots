@@ -23,7 +23,7 @@
   ];
   casks = [
     "raycast" # Spotlight replacement and productivity tool
-    "warp" # Terminal
+    "ghostty" # Terminal multiplexer
     "zen" # Distraction-free browser
     "1password" # Password manager
     "spotify" # Music streaming

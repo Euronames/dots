@@ -18,10 +18,12 @@
 
       imports = [
         ./packages.nix
+        ./environment.nix
         ./dotfiles.nix
         ./config/ssh.nix
         ./config/git.nix
-        ./config/shell.nix
+        ./config/fish.nix
+        ./config/zsh.nix
         ./config/starship.nix
         ./config/lsd.nix
         ./config/fzf.nix
@@ -31,6 +33,7 @@
         ./userScripts/setScreenshotsLocation.nix
         ./userScripts/filevaultCheck.nix
         ./userScripts/restartUi.nix
+
       ];
     };
   };

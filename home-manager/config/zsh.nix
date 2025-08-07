@@ -1,6 +1,6 @@
 args: {
   programs.zsh = {
-    enable = true;
+    enable = false;
     enableCompletion = true;
 
     autosuggestion = {
