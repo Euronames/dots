@@ -30,6 +30,13 @@ This repository contains my personal dotfiles, customized for setting up and man
 
 ---
 
+### Module Overview
+
+- **System Modules (`darwin/`)**: Manage macOS settings and services with Nix-darwin.
+- **User Modules (`home-manager/`)**: Configure applications, shells, and other user preferences via Home Manager.
+
+---
+
 ### Dependencies
 
 Ensure the following tools and frameworks are installed before applying the configurations:
@@ -45,13 +52,12 @@ Ensure the following tools and frameworks are installed before applying the conf
    - [Home Manager](https://github.com/nix-community/home-manager): Manages user-level configurations.
 3. **File-Specific Dependencies**:
 
-   - **`packages.nix`**:
-     - Ensure the listed packages (e.g., `mkalias`, `nixpkgs-fmt`) are available in your Nix channels or overlays.
-     - Review and customize the list to match your use case.
-   - **`services.nix`**:
-     - The `services.nix` file assumes the Nix Daemon (`nix-daemon`) is enabled.
-   - **`zsh.nix`**:
-     - Installs and configures Zsh. Ensure Zsh plugins such as `zsh-autosuggestions` are available.
+   - **`darwin/`**:
+     - Contains system modules and relies on `nix-darwin`.
+   - **`home-manager/`**:
+     - Hosts user modules and requires `home-manager`.
+   - **`nixfmt-rfc-style`**:
+     - Optional formatter for maintaining consistent Nix code style.
 
 4. **Recommended Commands**:
 
