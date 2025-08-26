@@ -47,7 +47,7 @@
     gnupg # GNU Privacy Guard for encryption and signing
     # Fun and Customization
     lolcat # Rainbow text output
-    neofetch # System information display
+    #neofetch # System information display
     cmatrix # Matrix-like screen display
     sl # Steam Locomotive, fun error correction for 'ls'
 

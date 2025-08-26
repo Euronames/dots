@@ -49,7 +49,7 @@ args: {
       ### Custom aliases ###
       ######################
       zshconfig = "vi ~/.zshrc ; echo 'Sourcing zsh file' ; source ~/.zshrc";
-      neofetch = ''clear && neofetch | lolcat'';
+      #neofetch = ''clear && neofetch | lolcat'';
       cmatrix = ''cmatrix -C green'';
       dots = "git -C $DOTFILES add -A ; git -C $DOTFILES commit -m 'Changed stuff' ; git -C $DOTFILES push";
       reboot = ''sudo reboot'';
