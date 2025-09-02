@@ -15,3 +15,5 @@ jobs:
         uses: cachix/install-nix-action@v20
       - name: Check Nix flake
         run: nix flake check
+      - name: ShellCheck
+        run: shellcheck bootstrap.sh
