@@ -28,6 +28,20 @@ This repository contains my personal dotfiles, customized for setting up and man
      sudo darwin-rebuild switch --flake ~/Projects/dots#MacBook-Pro
      ```
 
+3. **Development Shell and Formatting**
+
+   - Enter a development environment with tools like `nixd`, `nixfmt` and `shellcheck`:
+
+     ```bash
+     nix develop
+     ```
+
+   - Format all Nix files in the repository:
+
+     ```bash
+     nix fmt
+     ```
+
 ---
 
 ### Dependencies
