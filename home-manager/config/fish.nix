@@ -1,6 +1,6 @@
 { ... }:
 let
-  inherit (import ./aliases.nix) shellAliases functions;
+  sharedAliases = import ./aliases.nix;
 in
 {
   programs.fish = {
@@ -20,7 +20,7 @@ in
       end
     '';
 
-    inherit shellAliases;
-    functions = functions.fish;
+    inherit (sharedAliases) shellAliases;
+    functions = sharedAliases.functions.fish;
   };
 }

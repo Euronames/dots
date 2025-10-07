@@ -1,4 +1,4 @@
-{
+rec {
   shellAliases = {
     sudo = "sudo ";
     mkdir = "mkdir -pv";
@@ -22,7 +22,7 @@
     cya = "dots ; sudo shutdown -h now";
     up = "cd $DOTFILES && nix flake check && nix flake update && sudo darwin-rebuild switch --flake .#MacBook-Pro && cd -";
     c = "code";
-    pullall = "find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \\;";
+    pullall = "find . -mindepth 1 -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;";
     myip = "curl ipinfo.io/ip";
     ports = "netstat -t -u -l -a -n";
     lg = "lazygit";
@@ -31,9 +31,37 @@
 
   functions = {
     fish = {
-      mkcd = "function mkcd; if test (count $argv) -gt 0; mkdir $argv[1]; cd $argv[1]; end; end";
-      skub = "function skub; git pull; git add -A; if test (count $argv) -gt 0; git commit -m $argv[1]; else; git commit -m '.'; end; git push; end";
-      to = "function to; if test (count $argv) -gt 1; unoconv -f $argv[1] $argv[2]; else if test (count $argv) -eq 1; echo 'Need to specify file to convert....'; else; echo 'Need to specify what to convert to...'; end; end; end";
+      mkcd = ''
+        function mkcd
+          if test (count $argv) -gt 0
+            mkdir $argv[1]
+            cd $argv[1]
+          end
+        end
+      '';
+      skub = ''
+        function skub
+          git pull
+          git add -A
+          if test (count $argv) -gt 0
+            git commit -m $argv[1]
+          else
+            git commit -m '.'
+          end
+          git push
+        end
+      '';
+      to = ''
+        function to
+          if test (count $argv) -gt 1
+            unoconv -f $argv[1] $argv[2]
+          else if test (count $argv) -eq 1
+            echo 'Need to specify file to convert....'
+          else
+            echo 'Need to specify what to convert to...'
+          end
+        end
+      '';
     };
 
     zsh = ''

@@ -1,6 +1,8 @@
-args: let
-  inherit (import ./aliases.nix) shellAliases functions;
-in {
+args:
+let
+  sharedAliases = import ./aliases.nix;
+in
+{
   programs.zsh = {
     enable = false;
     enableCompletion = true;
@@ -28,7 +30,7 @@ in {
         "1password"
       ];
     };
-    inherit shellAliases;
-    initContent = functions.zsh;
+    inherit (sharedAliases) shellAliases;
+    initContent = sharedAliases.functions.zsh;
   };
 }
