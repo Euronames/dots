@@ -40,6 +40,7 @@
     ripgrep # Fast grep alternative
     less # Terminal pager
     cheat # Interactive cheatsheets
+    qbittorrent-enhanced # BitTorrent client
 
     # Network Tools
     wget # File download utility
