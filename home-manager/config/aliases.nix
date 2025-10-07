@@ -1,5 +1,3 @@
-{ }:
-
 {
   shellAliases = {
     sudo = "sudo ";
