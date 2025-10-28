@@ -60,7 +60,7 @@
     #_1password-gui            # Marked as broken
     #spotify
     #arc-browser
-    #brave # Browser
+    brave # Browser
 
     # macOS UI Enhancements
     hidden-bar # Menu bar icon management

@@ -86,22 +86,6 @@ args: {
           fi
           git push
       }
-
-      ##############
-      #Convert file#
-      ##############
-      function to() {
-          if [ "$1" != "" ]; then
-              if [ "$2" != "" ]; then
-                  unoconv -f "$1" "$2"
-                  #rmf "$2"
-              else
-                  echo "Need to specify file to convert...."
-              fi
-          else
-              echo "Need to specify what to convert to..."
-          fi
-      }
     '';
   };
 }

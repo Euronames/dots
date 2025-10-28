@@ -50,7 +50,6 @@
     functions = {
       mkcd = "function mkcd; if test (count $argv) -gt 0; mkdir $argv[1]; cd $argv[1]; end; end";
       skub = "function skub; git pull; git add -A; if test (count $argv) -gt 0; git commit -m $argv[1]; else; git commit -m '.'; end; git push; end";
-      to = "function to; if test (count $argv) -gt 1; unoconv -f $argv[1] $argv[2]; else if test (count $argv) -eq 1; echo 'Need to specify file to convert....'; else; echo 'Need to specify what to convert to...'; end; end; end";
     };
   };
 }

@@ -15,7 +15,10 @@
 
   programs.git = {
     enable = true;
-    inherit (machineConfig) userName userEmail;
+
+    #trace: warning: jensnavne profile: The option `programs.git.userEmail' defined in `/nix/store/3za802m3gniqwj86a3lqyqlbixqlg75m-source/home-manager/config/git.nix' has been renamed to `programs.git.settings.user.email'.
+    #trace: warning: jensnavne profile: The option `programs.git.userName' defined in `/nix/store/3za802m3gniqwj86a3lqyqlbixqlg75m-source/home-manager/config/git.nix' has been renamed to `programs.git.settings.user.name'.
+    #trace: warning: jensnavne profile: The option `programs.git.extraConfig' defined in `/nix/store/3za802m3gniqwj86a3lqyqlbixqlg75m-source/home-manager/config/git.nix' has been renamed to `programs.git.settings'.
 
     signing = {
       signer = "${pkgs.gnupg}/bin/gpg2";
@@ -24,7 +27,11 @@
       signByDefault = true;
     };
 
-    extraConfig = {
+    settings = {
+      user = {
+        name = machineConfig.name;
+        email = machineConfig.email;
+      };
 
       hub = {
         protocol = "https";

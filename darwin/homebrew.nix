@@ -19,7 +19,7 @@
   masApps = { };
 
   brews = [
-    "unoconv" # Universal converter: https://github.com/unoconv/unoconv
+
   ];
   casks = [
     "raycast" # Spotlight replacement and productivity tool
